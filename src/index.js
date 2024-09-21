@@ -41,9 +41,15 @@ function challengeTwo() {
 function challengeThree() {
     let ul = document.getElementById('dog-breeds')
     ul.addEventListener("click", function(event) {
+     
         if (event.target.tagName === 'LI') {
-            event.target.style.color = 'red';
+            if (event.target.style.color === 'red') {
+                event.target.style.color = 'gray'
+            } else {
+                event.target.style.color = 'red'; 
+            }
         }
+        
     });
 }
 
